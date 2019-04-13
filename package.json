@@ -1,0 +1,19 @@
+{
+  "name": "ahhsumx",
+  "version": "0.0.1",
+  "description": "musician site",
+  "main": "main.js",
+  "repository": "tbd",
+  "author": "lstebner",
+  "license": "MIT",
+  "private": null,
+  "dependencies": {
+    "global": "^4.3.2",
+    "pug": "^2.0.3"
+  },
+  "scripts": {
+    "build": "node build.js",
+    "build_prod": "NODE_ENV=production node build.js"
+  },
+  "devDependencies": {}
+}

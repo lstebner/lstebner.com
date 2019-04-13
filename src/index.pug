@@ -1,0 +1,13 @@
+doctype
+html
+  head
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+
+    if process.env.NODE_ENV == "production"
+      include analytics
+    style(type="text/css").
+  body
+    div
+      h1 hello
+
+
