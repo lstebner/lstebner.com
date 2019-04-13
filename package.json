@@ -15,5 +15,7 @@
     "build": "node build.js",
     "build_prod": "NODE_ENV=production node build.js"
   },
-  "devDependencies": {}
+  "devDependencies": {
+    "node-sass": "^4.11.0"
+  }
 }
