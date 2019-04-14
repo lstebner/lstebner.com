@@ -5,8 +5,11 @@ const sass = require("node-sass")
 const path = require("path")
 
 const SRC_DIR = path.resolve(__dirname, "src")
+const SRC_ASSETS_PATH = path.resolve(SRC_DIR, "assets")
 const BUILD_DIR = path.resolve(__dirname, "build")
+const BUILD_ASSETS_PATH = path.resolve(BUILD_DIR, "images")
 const TEMPLATE_EXT = ".pug"
+const VALID_ASSET_EXTENSIONS = [/\.png$/, /\.jpg$/, /\.svg$/, /\.jpeg$/]
 
 const QUIET = false
 
@@ -61,6 +64,38 @@ function ensure_build_dir_exists() {
   }
 }
 
+function is_valid_asset(asset_path) {
+  for (const i in VALID_ASSET_EXTENSIONS) {
+    const ext = VALID_ASSET_EXTENSIONS[i]
+    if (asset_path.match(ext)) {
+      return true
+    }
+  }
+
+  return false
+}
+
+function copy_assets() {
+  log("copying assets over...")
+
+  if (!fs.existsSync(BUILD_ASSETS_PATH)) {
+    fs.mkdirSync(BUILD_ASSETS_PATH)
+  }
+
+  const asset_files = fs.readdirSync(SRC_ASSETS_PATH)
+
+  for (const i in asset_files) {
+    const asset_file = asset_files[i]
+    const full_asset_path = path.resolve(__dirname, "src/assets", asset_file)
+    const asset_dest = full_asset_path.replace(/src\/assets/, "build/images")
+
+    if (is_valid_asset(asset_file)) {
+      fs.copyFileSync(full_asset_path, asset_dest)
+      log(`copied src/assets/${asset_file} -> build/images/${asset_file}`)
+    }
+  }
+}
+
 function render_all_views() {
   ensure_build_dir_exists()
 
@@ -75,6 +110,8 @@ function render_all_views() {
     render_view(src_file, dest_file)
     render_sass(src_sass_file, dest_sass_file)
   }
+
+  copy_assets()
 }
 
 // finally, the "go" point
