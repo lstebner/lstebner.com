@@ -2,12 +2,13 @@ doctype
 html
   head
     meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    link(href='https://fonts.googleapis.com/css?family=Rajdhani', rel='stylesheet')
+    link(href='index.css', rel='stylesheet')
 
     if process.env.NODE_ENV == "production"
       include analytics
-    style(type="text/css").
   body
-    div
+    div.content_container
       h1 luke stebner
       h2 developer / producer / creator
 
@@ -17,32 +18,96 @@ html
           a(href="https://github.com/lstebner", target="_blank") Github
           a(href="https://www.linkedin.com/in/lukestebner/", target="_blank") LinkedIn
 
-      ul.interests
-        li I like to write code
-        li I like to produce music
-        li I like to create goods
+      .box
+        .box_heading I specialize in...
 
-      ul.primary_skills
-        li JavaScript (vanilla js, ES6, React, coffeescript, nodejs, webpack, helper scripts)
-        li HTML (HTML5 and templating languages such as pug, erb, and fortitude)
-        li CSS (and pre-processors such as SASS and LESS)
-        li Ruby on Rails
+        ul.primary_skills.skills_list
+          li JavaScript 
+            span.subskills (vanilla js, ES6, React, coffeescript, nodejs, webpack, helper scripts)
+          li HTML 
+            span.subskills (HTML5 and templating languages such as pug, erb, and fortitude)
+          li CSS 
+            span.subskills (and pre-processors such as SASS and LESS)
+          li Ruby on Rails
+          li Git
 
-      ul.secondary_skills
-        li Audio (logic pro, audacity, basic production)
-        li Databases (MySQL, mongodb)
-        li Documentation (confluence, markdown)
-        li Unit Testing (mocha/chai, jest, rspec)
-        li Game Programming/Scripting (lua/love2d, C#/XNA)
-        li bash scripting (for repetitive task simplification)
-        li Basic devops (nginx routing, linux system maintenance, ssh)
+      .box
+        .box_heading I also know a few things about...
 
-      ul.hobbies
-        li Music Production
-        li Coffee Roasting
-        li Building random stuff that involves code
+        ul.secondary_skills.skills_list
+          li Audio 
+            span.subskills (logic pro, audacity, basic production)
+          li Databases 
+            span.subskills (MySQL, mongodb)
+          li Documentation 
+            span.subskills (confluence, markdown)
+          li Unit Testing 
+            span.subskills (mocha/chai, jest, rspec)
+          li Game Programming/Scripting 
+            span.subskills (lua/love2d, C#/XNA)
+          li bash scripting 
+            span.subskills (for repetitive task simplification)
+          li Basic devops 
+            span.subskills (nginx routing, linux system maintenance, ssh)
+          li Other backend languages 
+            span.subskills (PHP, Python)
+          li A/B testing
+          li Analytics tracking
+          li Bug/Task tracking 
+            span.subskills (jira, asana)
 
-      ul.random_stuff
-        li Check out my keyboard layouts
-        li Visit my etsy shop
+      .box
+        .box_heading My hobbies include...
+
+        ul.hobbies
+          li Music Production
+          li Coffee Roasting
+          li Cooking
+
+      .box
+        .box_heading Work I've done...
+
+        ul.work_resume
+          li Senior Front-end Engineer at Scribd
+            span.subtext  (currently employed)
+            .technology_list
+              strong technologies:
+              span  Javascript (React, coffeescript, jQuery), SCSS, HTML, Ruby on Rails, ActiveRecord, Fortitude, RSpec, Jest, Enzyme
+            .site_link
+              a(href="https://scribd.com/", target="_blank") scribd.com
+
+          li Front-end Engineer at BrightGauge
+            span.subtext  (2011-2013)
+            .technology_list
+              strong technologies:
+              span  Javascript, CSS/LESS, HTML, PHP (code igniter framework), Python, MySql, Mongodb
+            .site_link
+              a(href="https://www.brightgauge.com/", target="_blank") brightgauge.com
+
+          li Front-end Engineer at MerchantCircle
+            span.subtext  (2010-2011 during acquisition by Reply!)
+            .technology_list
+              strong technologies:
+              span  Python, HTML, Javascript, CSS
+            .site_link
+              a(href="https://www.merchantcircle.com/", target="_blank") merchantcircle.com
+
+          li Full stack developer at QuinStreet
+            span.subtext  (2009-2010 during IPO)
+            .technology_list
+              strong technologies: 
+              span  PHP, MySql, HTML, CSS, Javascript
+            .site_link
+              a(href="http://quinstreet.com/", target="_blank") quinstreet.com
+
+          li Backend developer at Visicswire
+            span.subtext  (2008)
+            .technology_list
+              strong technologies:
+              span  PHP, MySql, HTML, CSS, Javascript
+            .site_link
+              span site no longer available
+
+      .disclaimer This site was hand-rolled in a non-traditional fashion. You can find it on my github to learn more. Thanks for stopping by!
+
 

@@ -1,7 +1,158 @@
-.hello {
-  font-weight: 100;
+////////////////////////////////////////////////////
+//
+// global styleguide type vars
+//
+////////////////////////////////////////////////////
+$font_size_body: 22px;
+$link_color: #1876fa;
 
-  .world {
-    color: #8a8;
-  }
+
+
+////////////////////////////////////////////////////
+//
+// customizable layout vars
+//
+////////////////////////////////////////////////////
+$box_spacing: 40px;
+
+
+
+////////////////////////////////////////////////////
+//
+// mixin's here until there are enough to warrant their own file
+//
+////////////////////////////////////////////////////
+@mixin box_border {
+    border-left: 8px solid rgba(200, 200, 200, .3);
+    border-radius: 8px;
 }
+
+
+
+////////////////////////////////////////////////////
+//
+// global styles applied here
+//
+///////////////////////////////////////////////////
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Rajdhani', sans-serif;
+    font-size: $font_size_body;
+    font-weight: 100;
+    background: url("images/watermark.png");
+}
+
+a {
+    color: $link_color;
+
+    &:hover {
+        color: lighten($link_color, 5%);
+    }
+
+    &:visited {
+        color: darken($link_color, 5%);
+    }
+}
+
+h1 {
+    font-size: 2em;
+    font-weight: 500;
+    color: #111;
+}
+
+h2 {
+    font-size: 1.7em;
+    font-weight: 300;
+    color: #444;
+}
+
+h3 {
+    font-size: 1.5em;
+    font-weight: 100;
+    color: #444;
+}
+
+h4 {
+    font-size: 1.2em;
+    font-weight: 100;
+}
+
+h5, h6 {
+    font-size: 1em;
+    font-weight: 300;
+}
+
+p, div, span, a {
+    font-size: 1em;
+    margin: 0;
+    padding: 0;
+}
+
+ul, li {
+    font-size: 1em;
+}
+
+
+
+////////////////////////////////////////////////////
+//
+// component style's below
+//
+// /////////////////////////////////////////////////
+
+.content_container {
+    margin: 20px 40px;
+}
+
+.links {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+
+    a {
+        position: relative;
+        padding-right: 20px;
+        display: inline-block;
+        text-decoration: none;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+}
+
+.box {
+    margin-top: $box_spacing;
+    @include box_border;
+    background-color: rgba(255, 255, 255, 0.6);
+    padding: 8px 16px;
+    font-size: 1.25em;
+}
+
+.skills_list {
+}
+
+.subskills {
+    color: #777;
+}
+
+.work_resume {
+    .technology_list {
+        margin-top: 12px;
+        color: #333;
+    }
+
+    li {
+        margin-bottom: 22px;
+    }
+}
+
+.disclaimer {
+    text-align: center;
+    padding: 40px;
+    color: #aaa;
+    font-size: .7em;
+}
+
