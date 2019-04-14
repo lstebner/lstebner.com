@@ -2,6 +2,8 @@
 
 source code for lstebner.com 2019™
 
+this is a WIP and a fresh start for the repo that currently is being used for my website.
+
 ## directory explanation
 
 - README: this file
