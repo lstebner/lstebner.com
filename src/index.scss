@@ -1,57 +1,17 @@
-////////////////////////////////////////////////////
-//
-// global styleguide type vars
-//
-////////////////////////////////////////////////////
-$font_size_body: 22px;
-$link_color: #1876fa;
-
-
-
-////////////////////////////////////////////////////
-//
-// customizable layout vars
-//
-////////////////////////////////////////////////////
-$box_spacing: 40px;
-
-
-
-////////////////////////////////////////////////////
-//
-// mixin's here until there are enough to warrant their own file
-//
-////////////////////////////////////////////////////
-@mixin box_border {
-    border-left: 8px solid rgba(200, 200, 200, .3);
-    border-radius: 8px;
-}
-
-
-
-////////////////////////////////////////////////////
-//
-// global styles applied here
-//
-///////////////////////////////////////////////////
 body {
     margin: 0;
     padding: 0;
     font-family: 'Rajdhani', sans-serif;
-    font-size: $font_size_body;
+    font-size: 22px;
     font-weight: 100;
     background: url("images/watermark.png");
 }
 
 a {
-    color: $link_color;
+    color: #1876fa;
 
-    &:hover {
-        color: lighten($link_color, 5%);
-    }
-
-    &:visited {
-        color: darken($link_color, 5%);
+    &:hover, &:visited {
+        color: #172EF4;
     }
 }
 
@@ -93,14 +53,6 @@ ul, li {
     font-size: 1em;
 }
 
-
-
-////////////////////////////////////////////////////
-//
-// component style's below
-//
-// /////////////////////////////////////////////////
-
 .content_container {
     margin: 20px 40px;
 }
@@ -124,8 +76,9 @@ ul, li {
 }
 
 .box {
-    margin-top: $box_spacing;
-    @include box_border;
+    margin-top: 40px;
+    border-left: 8px solid rgba(200, 200, 200, .3);
+    border-radius: 8px;
     background-color: rgba(255, 255, 255, 0.6);
     padding: 8px 16px;
     font-size: 1.25em;
