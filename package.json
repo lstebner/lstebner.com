@@ -1,9 +1,9 @@
 {
-  "name": "ahhsumx",
+  "name": "lstebner.com",
   "version": "0.0.1",
-  "description": "musician site",
+  "description": "portfolio site",
   "main": "main.js",
-  "repository": "tbd",
+  "repository": "https://github.com/lstebner/lstebner",
   "author": "lstebner",
   "license": "MIT",
   "private": null,

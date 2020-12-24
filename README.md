@@ -1,8 +1,8 @@
 # lstebner.com
 
-source code for lstebner.com 2019™
+source code for lstebner.com 2019 and beyond™
 
-this is a WIP and a fresh start for the repo that currently is being used for my website.
+this is more or less a static site builder repo.
 
 ## directory explanation
 
@@ -22,7 +22,7 @@ this is a WIP and a fresh start for the repo that currently is being used for my
 1. check out branch
 2. `yarn`
 3. `yarn build`
-4. open `src/index.html` in a browser
+4. open `build/index.html` in a browser
 
 ## for deployment
 
