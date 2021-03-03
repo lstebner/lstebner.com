@@ -9,7 +9,7 @@
   "private": null,
   "dependencies": {
     "global": "^4.3.2",
-    "pug": "^2.0.3"
+    "pug": "^3.0.1"
   },
   "scripts": {
     "build": "node build.js",
