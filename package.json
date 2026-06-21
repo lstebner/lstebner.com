@@ -2,20 +2,16 @@
   "name": "lstebner.com",
   "version": "0.0.1",
   "description": "portfolio site",
-  "main": "main.js",
   "repository": "https://github.com/lstebner/lstebner",
   "author": "lstebner",
   "license": "MIT",
-  "private": null,
+  "private": true,
   "dependencies": {
-    "global": "^4.3.2",
-    "pug": "^2.0.3"
+    "pug": "^2.0.3",
+    "sass": "^1.0.0"
   },
   "scripts": {
     "build": "node build.js",
     "build_prod": "NODE_ENV=production node build.js"
-  },
-  "devDependencies": {
-    "node-sass": "^4.11.0"
   }
 }
