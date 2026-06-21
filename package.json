@@ -7,7 +7,7 @@
   "license": "MIT",
   "private": true,
   "dependencies": {
-    "pug": "^2.0.3",
+    "pug": "^3.0.0",
     "sass": "^1.0.0"
   },
   "scripts": {
