@@ -98,7 +98,7 @@ ul, li {
     &.alt {
         background-color: var(--color-black);
         color: var(--color-beige);
-        
+
         a {
             color: #77d;
         }
@@ -141,11 +141,37 @@ ul, li {
     font-size: .7em;
 }
 
+.site_footer {
+    padding: 30px 46px;
+    background-color: var(--color-yellow);
+
+    a {
+        display: inline-block;
+        background-color: var(--color-beige);
+        color: var(--color-black);
+        text-decoration: none;
+        font-size: .85em;
+        letter-spacing: .05em;
+        padding: 16px 32px;
+        border-radius: 16px;
+        border: 1px solid transparent;
+
+        &:hover {
+            background-color: #fff;
+            border-color: var(--color-black);
+        }
+
+        &:visited {
+            color: var(--color-black);
+        }
+    }
+}
+
 @media (max-width: 500px) {
     ul {
         list-style-type: none;
         padding: 0;
-        
+
         li {
         }
     }
